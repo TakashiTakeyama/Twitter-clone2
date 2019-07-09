@@ -1,0 +1,2 @@
+class Tubuyaki < ApplicationRecord
+end

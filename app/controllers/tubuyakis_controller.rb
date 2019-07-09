@@ -1,0 +1,2 @@
+class TubuyakisController < ApplicationController
+end

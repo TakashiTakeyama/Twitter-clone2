@@ -7,6 +7,7 @@ class TubuyakisController < ApplicationController
 
   def new
     if params[:back]
+      # binding.pry
       @tubuyaki = Tubuyaki.new(tubuyaki_params)
     else
       @tubuyaki = Tubuyaki.new

@@ -4,5 +4,10 @@
   <%= form.hidden_field :content %>
 
   <p>本文:<%= @tubuyaki.content %></p>
-  <%= form.submit  "つぶやく", name:'back' %>
+  <%= form.submit  "つぶやく" %>
+<% end %>
+
+<%= form_with(model: @tubuyaki, url: new_tubuyaki_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :content %>
+  <%= form.submit "戻る", name:'back' %>
 <% end %>

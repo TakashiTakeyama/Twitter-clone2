@@ -1,30 +1,22 @@
 <html>
-<body>
-<header>
-  <h1>Twitter-clone</h1>
-</header>
-<div class="main-contents">
-  <%= form_with(model: @tubuyaki, local: true,url:choose_new_or_edit) do |form| %>
-    <% if @tubuyaki.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= @tubuyaki.errors.count %>件のエラーがあります。</h2>
-        <ul>
-          <% @tubuyaki.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-        </ul>
+  <div class="main-contents">
+    <%= form_with(model: @tubuyaki, local: true,url:choose_new_or_edit) do |form| %>
+      <% if @tubuyaki.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= @tubuyaki.errors.count %>件のエラーがあります。</h2>
+          <ul>
+            <% @tubuyaki.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="tubuyaki_title" %>
+        <%= form.text_field :content %>
       </div>
+      <%= form.submit("つぶやく")%>
+      <br><%= link_to "つぶやき一覧をみる", tubuyakis_path %>
     <% end %>
-    <div class="tubuyaki_title" %>
-      <%= form.text_field :content %>
-    </div>
-    <%= form.submit("つぶやく")%>
-    <br><%= link_to "つぶやき一覧をみる", tubuyakis_path %>
-  <% end %>
-</div>
-<footer class="footer">
-  <p>Copyright © 2019 TAKEYAMA INC All RIGHTS RESERVED.</p>
-</footer>
-</body>
+  </div>
 </html>
 

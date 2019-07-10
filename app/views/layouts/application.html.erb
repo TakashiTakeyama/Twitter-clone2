@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <header>
+    <h1>Twitter-clone</h1>
+  </header>
   <head>
     <title>TwitterClone2</title>
     <%= csrf_meta_tags %>
@@ -8,8 +11,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <%= yield %>
   </body>
+  <footer class="footer">
+    <p>Copyright © 2019 TAKEYAMA INC All RIGHTS RESERVED.</p>
+  </footer>
 </html>
